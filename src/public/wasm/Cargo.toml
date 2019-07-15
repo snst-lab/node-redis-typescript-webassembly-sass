@@ -1,0 +1,29 @@
+[package]
+name = "wasm"
+version = "0.1.0"
+authors = ["%USERNAME%<%USERNAME%@example.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+lazy_static = "0.2.1"
+
+[dependencies.wasm-bindgen]
+version = "0.2.45"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Window',
+  'Element',
+  'Node',
+  'HtmlElement',
+  'DocumentFragment',
+  'CssStyleDeclaration',
+  'Event',
+  'MouseEvent',
+  'EventTarget',
+]

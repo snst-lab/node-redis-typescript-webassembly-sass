@@ -1,0 +1,30 @@
+section {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+article {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  background: white;
+  box-shadow: 0 0 5px $gray5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $gray1;
+}
+
+p {
+  text-indent:1em;
+  color: $gray2;
+  text-indent: 1em;
+}

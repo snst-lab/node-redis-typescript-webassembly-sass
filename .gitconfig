@@ -1,0 +1,13 @@
+[user]
+    name = "%USERNAME%"
+    email = %USERNAME%@example.com
+[color]
+    ui = auto
+[alias]
+    log = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[gui]
+    encoding = utf-8 
+[receive]
+    denyNonFastforwards = false 
+[core]
+    quotepath = false 

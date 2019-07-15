@@ -1,0 +1,55 @@
+{
+  "name": "%PROJECTNAME%",
+  "version": "1.0.0",
+  "description": "",
+  "author": "%USERNAME%",
+  "license": "Apache-2.0",
+  "main": "build/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%USERNAME%/%PROJECTNAME%.git"
+  },
+  "bugs": {
+    "url": "https://github.com/%USERNAME%/%PROJECTNAME%/issues"
+  },
+  "homepage": "https://github.com/%USERNAME%/%PROJECTNAME%#readme",
+  "postinstall": "./bin/node-prune.exe",
+  "devDependencies": {
+    "@types/app-root-path": "",
+    "@types/express": "",
+    "@types/node": "",
+    "@types/redis": "",
+    "browser-sync": "",
+    "del": "",
+    "gulp": "",
+    "gulp-plumber": "",
+    "gulp-sass": "",
+    "path": "",
+    "ts-loader": "",
+    "tslint": "",
+    "tslint-loader": "",
+    "typescript": "",
+    "webpack": "4.17.1",
+    "webpack-cli": "",
+    "webpack-node-externals": ""
+  },
+  "scripts": {
+    "start": "node build/server.js",
+    "build": "webpack",
+    "wasm": "sh -c 'bin/wasm-pack.exe build src/public/wasm --target web'",
+    "commit": "git add -A && git commit",
+    "cancel": "git reset --soft HEAD^",
+    "push:github": "git remote rm origin && git remote add origin git@github.com:%USERNAME%/%PROJECTNAME%.git && git push origin master",
+    "pull:github": "git pull git@github.com:%USERNAME%/%PROJECTNAME%.git master --allow-unrelated-histories",
+    "push:heroku": "heroku git:remote -a %PROJECTNAME% && git push heroku master",
+    "pull:heroku": "git pull https://git.heroku.com/%PROJECTNAME%.git master --allow-unrelated-histories",
+    "docker:build": "docker-compose -f docker-compose.yml up --build",
+    "docker:login": "docker exec -it"
+  },
+  "dependencies": {
+    "app-root-path": "",
+    "express": "",
+    "redis": ""
+  },
+  "private": true
+}
