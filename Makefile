@@ -47,8 +47,8 @@ setup_devcontainer: .devcontainer/devcontainer.json
 	@make setup_readme_md
 
 setup_readme_md: ./README.md
-	mv README.md ./doc/USAGE.md 
-	@sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" ./doc/README.md > ./README.md && \
+	@mv README.md ./doc/USAGE.md && \
+	sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" ./doc/README.md > ./README.md 
 	@make setup_version_md
 
 setup_version_md: ./doc/VERSION.md
