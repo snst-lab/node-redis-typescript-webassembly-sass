@@ -15,6 +15,7 @@ services:
   redis:
     restart: always
     image: redis:latest
+    container_name: redis-container
     volumes:
         - ./store/redis:/data
     ports:

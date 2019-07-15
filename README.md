@@ -20,7 +20,7 @@ This is a template of project for the develop web application using following fe
 
   1. Clone this repository.
   ```sh
-    git clone https://github.com/snst-lab/node-redis-typescript-webassembly-sass
+    git clone https://github.com/snst-lab/node-redis-typescript-webassembly-sass <project name>
   ```
 
   2. Run command below to launch container 
@@ -30,7 +30,8 @@ This is a template of project for the develop web application using following fe
 
   3. Login to container 
   ```sh
-    docker exec -it [container_id] bash
+    docker ps //check container ID with ps command first
+    docker exec -it <container_id> bash
   ```
 
  ### Edit Project
@@ -42,7 +43,7 @@ This is a template of project for the develop web application using following fe
 
   2. Login to container 
   ```sh
-    docker exec -it [container_id] bash
+    docker exec -it <container_id> bash
   ```
 
 <br>
