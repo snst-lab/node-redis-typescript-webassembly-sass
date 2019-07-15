@@ -39,6 +39,11 @@ setup_package_json: ./package.json
 setup_gitconfig: ./.gitconfig
 	@sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" ./.gitconfig > .gitconfig.master && \
 	mv .gitconfig.master .gitconfig
+	@make setup_devcontainer
+
+setup_devcontainer: .devcontainer/devcontainer.json
+	@sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" .devcontainer/devcontainer.json > .devcontainer/devcontainer.json.master && \
+	mv .devcontainer/devcontainer.json.master .devcontainer/devcontainer.json
 	@make setup_readme_md
 
 setup_readme_md: ./README.md
