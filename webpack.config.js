@@ -47,11 +47,11 @@ module.exports = [
 		mode: process.env.NODE_ENV || 'development', // 'production'
 		devtool: 'inline-source-map',
 		entry: {
-			'build/public/script/main': './src/public/script/main.ts'
+			'build/script/main': './src/script/main.ts'
 		},
 		output: {
-			path: path.resolve(__dirname, 'build/public/script'),
-			publicPath: './build/public/script/',
+			path: path.resolve(__dirname, 'build/script'),
+			publicPath: './build/script/',
 			filename: 'main.js'
 		},
 		resolve: {

@@ -66,9 +66,9 @@ setup_index_html: ./index.html
 	mv index.html.master  index.html
 	@make setup_cargo_toml
 
-setup_cargo_toml: ./src/public/wasm/Cargo.toml
-	@sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" ./src/public/wasm/Cargo.toml > ./src/public/wasm/Cargo.toml.master && \
-	mv ./src/public/wasm/Cargo.toml.master ./src/public/wasm/Cargo.toml
+setup_cargo_toml: ./src/wasm/Cargo.toml
+	@sed -e "s/%USERNAME%/$(USER_NAME)/g; s/%PROJECTNAME%/$(PROJECT_NAME)/g;" ./src/wasm/Cargo.toml > ./src/wasm/Cargo.toml.master && \
+	mv ./src/wasm/Cargo.toml.master ./src/wasm/Cargo.toml
 	@make download_license
 
 download_license: ./doc

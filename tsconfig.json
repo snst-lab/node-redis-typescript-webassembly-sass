@@ -3,7 +3,7 @@
         "sourceMap": true,
         "target": "es5",
         "lib": ["dom","es6","es2015.core"],
-        "outDir": "build/public/script",
+        "outDir": "build/script",
         "module": "commonjs",
         "moduleResolution": "node",
         "types" : ["node"],
